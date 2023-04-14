@@ -13,7 +13,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-
+    
     <script src='https://kit.fontawesome.com/f4cf415fdd.js' crossorigin='anonymous'></script>
 
     <style>
@@ -50,7 +50,193 @@
             padding-left: 40px;
             
         }
+
+        .featured{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: teal; 
+        }
+
+        .featured-title{
+            font-family: 'Playfair Display', sans-serif;
+            font-size: 40px;
+            color: white;
+        }
+
+        .featured-content{
+            font-family: 'Lato', sans-serif;
+            font-size: 30px;
+            color: white;
+        }
+
+        .featured-2{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: peru;
+        }
+
+        .featured-2 .mission{
+            padding-top: 80px;
+        }
+
+    
+  
+
+
+        .flex-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: peru;
+        }
+    
+        .flex-container-name{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+              
+        }
+        .flex-container-description{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 40px;
+        }
+        .description{
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            font-weight: none;  
+        }
+
+
+        .flex-box1 {
+            width: 400px;
+            height: 400px;
+            background: url(images/elin.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;
+            border: solid #fff;
+         }
+         .flex-box11{
+            width: 400px;
+            height: 400px;
+            background: url(images/em.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;
+            border: solid #fff; 
+         }
+      
        
+        .flex-box2{
+            width: 400px;
+            height: 400px;
+            background: url(images/milo.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;  
+            border: solid #fff;
+        }
+        .flex-box22{
+            width: 400px;
+            height: 400px;
+            background: url(images/pexels-laura-stanley-3090875.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;
+            border: solid #fff; 
+         }
+        .flex-box3{
+            width: 400px;
+            height: 400px;
+            background: url(images/luna.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;  
+            border: solid #fff;
+        }
+        .flex-box33{
+            width: 400px;
+            height: 400px;
+            background: url(images/pexels-alexas-fotos-2189599.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;
+            border: solid #fff; 
+         }
+        .flex-box4{
+            width: 400px;
+            height: 400px;
+            background: url(images/chico.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;  
+            border: solid #fff;
+        }
+        .flex-box44{
+            width: 400px;
+            height: 400px;
+            background: url(images/pexels-charles-1851164.jpg);
+            background-size: cover;
+            line-height: 200px;
+            margin: 10px;
+            border: solid #fff; 
+         }
+
+        .name{
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .flex-container-name{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+              
+        }
+        .flex-container-description{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .description{
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-weight: 500;  
+            color: white;
+            padding-bottom: 20px;
+            
+        }
+      
+  
+
+
+
+      
     </style>
     
   
@@ -70,6 +256,7 @@
                 <li class="active"><a href="index.html">home</a></li>
                 <li><a href="adopt.html">adopt</a></li>
                 <li><a href="about.html">about us</a></li>
+                <li><a href="blog.html">blog</a></li>
                 <li><a href="volunteer.html">volunteer</a></li>
                 <li><a href="policy.html">policy</a></li>
                 <li><a href="contact.html">contact us</a></li>
@@ -83,7 +270,7 @@
         <div class="row">
             <div class="banner">
                 
-                <img src="images/pexels-nothing-ahead-8877623.jpg">
+                <img src="images/pexels-nothing-ahead-8877623.jpg" alt="paw prints">
             
                 <h2 class="heading">"Dogs have a way of finding the people who<br>need them, filling emptiness we don't<br>even know we have." -Thom Jones</h2>
             </div>
@@ -93,23 +280,129 @@
 
 
 
-
-
-
-
-
-
-       <div class="container">
-        <white-space class="white-space"></white-space>
-    </div>  
+<div class="mission-area">
         <h1 class="mission-title">Mission</h1>
        <p class="mission">Fur Friends is a not-for-profit 503(c) organization<br>dedicated to the health and welfare of animals<br> that owns and operates a shelter<br> for unwanted and stray dogs, and cats,<br> as well as the occasional hamster,<br> guinea pig and rabbit, in Essex, Vermont.
         </p>
     </div>
 
+</div>
+
+
+
+
+
+    
+ 
+
+<div class="featured">
+
+    <h1 class="mission-title">Featured Pets</h1>
+    <p class="mission"></p>
+
+
+
+
+    <div class="flex-container">
+        <div class="flex-box11">
+           
+        </div>
+        <div class="flex-box22">
+
+        </div>
+        <div class="flex-box33">
+            
+        </div>
+        <div class="flex-box44">
+            
+        </div>
+    </div>
+
+    <div class="flex-container-name">
+        <div class="flex-boxa">
+          <h1 class="name">Em</h1>
+        </div>
+        <div class="flex-boxb">
+          <h1 class="name">Chip</h1> 
+        </div>
+        <div class="flex-boxc">
+          <h1 class="name">Peanut</h1>  
+        </div>
+        <div class="flex-boxd">
+          <h1 class="name">Pugsley</h1> 
+        </div>
+    </div>
+
+
+    <div class="flex-container-description">
+        <div class="flex-boxa">
+          <p class="description">Em is an affectionate lap cat.<br> Enjoys snuggles and treats.</p>
+        </div>
+        <div class="flex-boxb">
+          <p class="description">Chip enjoys playing fetch.<br>He also enjoys long walks.</p> 
+        </div>
+        <div class="flex-boxc">
+          <p class="description">Peanut loves carrots and apples.</p>  
+        </div>
+        <div class="flex-boxd">
+          <p class="description">Pugsley enjoys hiking.</p> 
+        </div>
+    </div>
+
 
 
 </div>
+
+
+
+ 
+
+
+
+<div class="featured-2">
+
+    <h1 class="mission-title">Adoption Stories</h1>
+    <p class="mission"></p>
+
+
+
+
+   <div class="flex-container">
+    <div class="flex-box1">
+       
+    </div>
+    <div class="flex-box2">
+
+    </div>
+    <div class="flex-box3">
+        
+    </div>
+    <div class="flex-box4">
+        
+    </div>
+</div>
+
+<div class="flex-container-name">
+    <div class="flex-boxa">
+      <h1 class="name">Elin & Em</h1>
+    </div>
+    <div class="flex-boxb">
+      <h1 class="name">Milo & Ravioli</h1> 
+    </div>
+    <div class="flex-boxc">
+      <h1 class="name">Gabby & Luna</h1>  
+    </div>
+    <div class="flex-boxd">
+      <h1 class="name">Chico & Mr. Fleck</h1> 
+    </div>
+</div>
+
+
+
+</div>
+
+
+
 
 <div class="container">
     <white-space class="white-space"></white-space>
@@ -121,7 +414,9 @@
 <footer>
     <div class="container">
         <h1 class="footer">Fur Friends</h1>
-        <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
+        <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+        copyright 2023 FurFriends</p>
+        
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-square-instagram"></i>
     </div>
