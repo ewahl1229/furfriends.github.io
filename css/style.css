@@ -131,7 +131,7 @@
   }
 
   section {
-    background: url(/website/images/pexels-nothing-ahead-8877623.jpg) no-repeat;
+    background: url(images/pawprints.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px);
 
@@ -145,7 +145,7 @@
 .orange-logo {
   width: 320px;
   height: 200px;
-  background-image: url(/website/images/logo.png);
+  background-image: url(images/logo.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
