@@ -18,6 +18,54 @@
 
 
     <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: teal;
+
+        }
+        .container{
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 6px;
+            padding: 30px;
+            margin: 0 15px;
+            background-color: white;
+        }
+
+        .container header{
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+
+
+        }
+
+        .container header::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 3px;
+            width: 27px;
+            border-radius: 7px;
+            background-color: peru;
+        }
+
+        .container form{
+            position: relative;
+            margin-top: 16px;
+            min-height: 490px;
+            background-color: #f2f2f2;
+
+
+        }
+
+        
         button{
             font-family: "Playfair Display", sans-serif;
             color: black;
@@ -26,37 +74,95 @@
             padding: 7px 13px;
             border-radius: 3px;
             text-transform: uppercase;
-            text-align: justify;
+            text-align: center;
             cursor: pointer;
 
+        }
+        .container-2{
+            width: 100%;
+            height: 100hv;
+            background: peru;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .btn{
+            padding: 10px 60px;
+            background: white;
+            border: 0;
+            outline:peru;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 500;
+            border-radius: 30px;
+
+        }
+        .popup{
+            width: 400px;
+            background: white;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
+
+        }
+
+        .open-popup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .popup img{
+            width: 100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .popup h2{
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+
+        .popup button{
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background: teal;
+            color: white;
+            border: 0;
+            outline: peru;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+        }
+        a{
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
         }
     </style>
 
 </head>
 <body>
-    <img src="images/new fur friends logo.png" class="fur-friends-logo">
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        
-        
-       
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">home</a></li>
-                <li><a href="adopt.html">adopt</a></li>
-                <li><a href="about.html">about us</a></li>
-                <li><a href="volunteer.html">volunteer</a></li>
-                <li><a href="policy.html">policy</a></li>
-                <li><a href="contact.html">contact us</a></li>
-         
-            </ul>
-        </nav>
+    
 
 
-    <form>
-        <h1>Adoption Application</h1>
+    
+<div class="container">
+    <header>Adoption Application</header>
+    <form action="#">
+
 
         <h3>I want to adopt a:</h3>
         Cat: <input type="radio" name="Cat" value="Cat">
@@ -80,8 +186,8 @@
         State: <input type="text" name="state" placeholder="State">
         Zip Code: <input type="text" name="zip" placeholder="Zip Code">
         Phone: <input type="text" name="phone" placeholder="Phone">
-        Email: <input type="text" name="email" placeholder="Email">
-        Birth Date: <input type="text" name="birthdate" placeholder="Date of Birth">
+        Email: <input type="email" name="email" placeholder="Email">
+        Birth Date: <input type="date" name="birthdate" placeholder="Date of Birth">
         Driver's License Number: <input type="text" name="id" placeholder="Driver's License">
         State Issued: <input type="text" name="dl-state" placeholder="State Issued">
 
@@ -128,11 +234,21 @@
         Yes: <input type="radio" name="yes" value="yes">
         No: <input type="radio" name="no" value="no">
 
-        <button type="submit">submit</button>
-        
+        <div class="container-2">
+            <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+            <div class="popup" id="popup">
+                <img src="images/sadie.png" alt="cat">
+                <h2>Thank You!</h2>
+                <p>Your application has been successfully submitted. Thank You!</p>
+                <button type="button"onclick="closePopup()">OK</button>
+            </div>
+        </div>
+
+        <a href="index.html">Return to Fur Friends</a>
 
     </form>
 
+</div>
 
 
 
@@ -140,22 +256,18 @@
 
 
 
+    <script>
+        let popup = document.getElementById("popup");
 
+        function openPopup(){
+            popup.classList.add("open-popup");
 
-
-
-    <footer>
-        <div class="container">
-            <h1 class="footer">Fur Friends</h1>
-            <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-        </div>
-    </footer>
-    
-    
-    
-    
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+            
+        }
+    </script>
     
     </body>
     </html>
