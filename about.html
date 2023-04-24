@@ -97,7 +97,40 @@
             margin-right: 15px;
             
         }
-      
+        button{
+        border-radius: 4px;
+        color: black;
+        background-color: peru;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .social-icon{
+          float: right;
+        }
+        .social-icon{
+          color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          
+          
+          
+        }
+        .social-icon:hover{
+          color: peru;
+          background-color: white;
+        }
+     
+        .footer-text {
+          font-size: 24px;
+          font-family: 'Lato', sans-serif;
+          padding: 0 100px;
+        }
     
     </style>
     
@@ -106,7 +139,7 @@
 </head>
 
 <body>
-    <img src="images/logo.png" class="fur-friends-logo">
+    <img src="images/logo.png" alt="Fur Friends Logo" class="fur-friends-logo">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -130,7 +163,18 @@
 
       
  
-
+        <div class="about-container-right">
+            <div class="wrapper">
+                <img src="images/building.jpg" alt="brick building">
+                <div class="about-text">
+                    <h1 class="about-title">Fur Friends Mission</h1>
+                    <p class="about-content-text">Fur Friends is a not-for-profit 503(c) organization dedicated to the health and welfare of animals that owns and operates a shelter for unwanted and stray dogs, and cats, as well as the occasional hamster, guinea pig and rabbit, in Essex, Vermont.</p><br>
+                    
+                       
+                </div>     
+            </div>
+        
+        </div>
 
     
 
@@ -141,7 +185,8 @@
         <div class="about-text">
             <h1 class="about-title">About Fur Friends</h1>
             <p class="about-content-text">Fur Friends was established by a group of college friends who once adopted a 3-legged calico, Sadie, while attending college in Burlington, Vermont.  The animal shelter was introduced in 2008 to memorialize Sadie.  Fur Friends is a not-for-profit 503(c) organization dedicated to the health and welfare of animals that owns and operates a shelter for unwanted and stray dogs, and cats, as well as the occasional hamster, guinea pig and rabbit, in Essex, Vermont.</p><br>
-                <a href="aboutadoption.html">ADOPTABLE PETS</a>
+                
+          
                 
         </div>     
     </div>
@@ -161,7 +206,7 @@
                 Sadie thrived and became a loving companion for the college students.  After they graduated, Sadie went to live with Clarisa in Jericho, Vermont until 2007.  
                 </p><br>
             
-                <a href="application.html">ADOPTION APPLICATION</a>
+             
         </div>     
     </div>
 
@@ -179,15 +224,41 @@
 
         <white-space class="white-space"></white-space>
     </div>
+ 
 
-        <footer>
-          <div class="container">
-              <h1 class="footer">Fur Friends</h1>
-              <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-square-instagram"></i>
-          </div>
-      </footer>
+<footer>
+
+    <a class="social-icon" href="https://facebook.com" target="_blank">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    
+    
+    <a class="social-icon" href="https:/instagram.com" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+        
+    <a class="social-icon" href="https:/twitter.com" target="_blank">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  
+    <a class="social-icon" href="https:/youtube.com" target="_blank">
+      <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+      <div class="container-two">
+          <p class="footer-text">Fur Friends<br>Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+          copyright 2023 FurFriends | privacy policy</p>
+        
+        
+      </div>
+  </footer>
+  
+  
+  
+  
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
       
       
       
