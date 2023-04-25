@@ -13,6 +13,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+  
 
     <script src='https://kit.fontawesome.com/f4cf415fdd.js' crossorigin='anonymous'></script>
     
@@ -59,17 +60,7 @@
         width: 800px;
         height: 1000px;
       }
-      a{
-        font-family: "Playfair Display", sans-serif;
-            color:white;
-            font-size: 25px;
-            font-weight: bolder;
-            padding: 7px 13px;
-            text-transform: uppercase;
-            text-align: center;
-            
-            
-      }
+
       .adopt-container-right{
             display: flex;
             justify-content: center;
@@ -91,7 +82,38 @@
             margin-right: 15px;
             
         }
-      
+        button{
+        border-radius: 4px;
+        color: black;
+        background-color: peru;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .social-icon{
+          color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          float: right;
+          
+          
+          
+        }
+        .social-icon:hover{
+          color: peru;
+          background-color: white;
+        }
+     
+        .footer-text {
+          font-size: 24px;
+          font-family: 'Lato', sans-serif;
+          padding: 0 100px;
+        }
     
     </style>
     
@@ -100,7 +122,7 @@
 </head>
 
 <body>
-    <img src="images/logo.png" class="fur-friends-logo">
+    <img src="images/logo.png" alt="Fur Friends Logo" class="fur-friends-logo">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -131,11 +153,13 @@
         
 <div class="adopt-container-left">
     <div class="wrapper">
-        <img src="images/indie2.jpg" alt="terrier mix">
+        <img src="images/indie2.jpg" alt="terrier mix dog">
         <div class="adopt-text">
             <h1 class="adopt-title">Why adopt?</h1>
             <p class="adopt-content-text">Thank you for your interest in pet adoption at Fur Friends Animal Shelter.  Please look at our adoptable cats and dogs which are listed below.  If our team determines that you and the pet you applied for are a good match, you will hear about more information regarding the adoption process.  </p><br>
-                <a href="aboutadoption.html">ADOPTABLE PETS</a>
+            <a href="aboutadoption.html">
+                <button>Available Pets</button>
+            </a>  
                 
         </div>     
     </div>
@@ -146,18 +170,21 @@
         
 <div class="adopt-container-right">
     <div class="wrapper">
-        <img src="images/rubyfleck.JPG" alt="two dogs">
+        <img src="images/rubyfleck.JPG" alt="two dogs on a rainy day">
         <div class="adopt-text">
             <h1 class="adopt-title">About Pet Adoption</h1>
             <p class="adopt-content-text">There are so many pets that are abandoned, homeless, or given up by their owners that need our help.  There are millions of adoptable pets that are euthanized in shelters every year.  They have no voices to speak and tell their stories.  They rely on us to give them a chance at finding their forever homes.  </p><br>
             
-                <a href="application.html">ADOPTION APPLICATION</a>
+            <a href="application.html">
+                <button>Application</button>
+            </a>  
         </div>     
     </div>
 
 </div>
     
     
+
     
     
 
@@ -170,15 +197,40 @@
         <white-space class="white-space"></white-space>
     </div>
 
-        <footer>
-          <div class="container">
-              <h1 class="footer">Fur Friends</h1>
-              <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-square-instagram"></i>
+
+
+    <footer>
+
+        <a class="social-icon" href="https://facebook.com" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        
+        
+        <a class="social-icon" href="https:/instagram.com" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+            
+        <a class="social-icon" href="https:/twitter.com" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      
+        <a class="social-icon" href="https:/youtube.com" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+          <div class="container-two">
+              <p class="footer-text">Fur Friends<br>Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+              copyright 2023 FurFriends | privacy policy</p>
+            
+            
           </div>
       </footer>
       
+      
+      
+      
+      
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
       
       
       
