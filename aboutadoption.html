@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -59,14 +61,38 @@
             border: 3px solid white;
             margin-right: 15px;
         }
-        a{
-            font-family: "Playfair Display", sans-serif;
-            color: white;
-            font-size: 25px;
-            font-weight: bolder;
-            padding: 7px 13px;
-            text-transform: uppercase;
-            text-align: center; 
+     
+        button{
+        border-radius: 4px;
+        color: black;
+        background-color: peru;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .social-icon{
+          color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          float: right;
+          
+          
+          
+        }
+        .social-icon:hover{
+          color: peru;
+          background-color: white;
+        }
+      
+        .footer-text {
+          font-size: 24px;
+          font-family: 'Lato', sans-serif;
+          padding: 0 100px;
         }
     </style>
     
@@ -75,7 +101,7 @@
 </head>
 
 <body>
-    <img src="images/logo.png" class="fur-friends-logo">
+    <img src="images/logo.png" alt="Fur Friends Logo" class="fur-friends-logo">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -109,7 +135,9 @@
                 <div class="about-adoption-text">
                     <h1 class="about-adoption-title">Dogs</h1>
                     <p class="about-adoption-text">There are so many pets that are abandoned, homeless,<br> or given up by their owners that need, and deserve, our help.<br>  There are millions of adoptable pets that are euthanized in shelters every year.<br>  They have no voices to speak and tell their stories.<br>  They rely on us to give them a chance at finding their forever homes.</p><br>
-                    <a href="dogs.html">ADOPTABLE DOGS</a>
+                    <a href="dogs.html">
+                        <button>Dogs</button>
+                    </a> 
                 </div>
             </div>
  
@@ -125,7 +153,9 @@
                         <div class="about-adoption-text">
                             <h1 class="about-adoption-title">Cats</h1>
                             <p class="about-adoption-text">You can choose to purchase a pet from a reputable breeder<br> if you choose instead to adopt a rescued pet<br> you are truly saving a life and making a difference.<br>  That pet will thank you for the rest of its days.</p><br>
-                            <a href="cats.html">ADOPTABLE CATS</a>
+                            <a href="cats.html">
+                                <button>Cats</button>
+                            </a> 
                         </div>
                     </div>
          
@@ -142,7 +172,9 @@
                                     <p class="about-adoption-text">
                                         You will be rewarded with love and affection that is like no other.<br>  You will know that you have helped in the adoption process with these loving animals.<br>  Without help, they would not have found families<br> whom they can bond with and loving homes that they can call their own.  
                                         </p><br>
-                                    <a href="otherpets.html">OTHER ADOPTABLE PETS</a>
+                                        <a href="otherpets.html">
+                                            <button>Other Pets</button>
+                                        </a> 
                                    
                                 </div>
                                 </div>
@@ -159,15 +191,40 @@
         <white-space class="white-space"></white-space>
     </div>
 
-        <footer>
-          <div class="container">
-              <h1 class="footer">Fur Friends</h1>
-              <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-              <img class="facebook" src="">
-              <img class="intagram" src="">
-          </div>
-      </footer>
-      
+    
+
+<footer>
+
+    <a class="social-icon" href="https://facebook.com" target="_blank">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    
+    
+    <a class="social-icon" href="https:/instagram.com" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+        
+    <a class="social-icon" href="https:/twitter.com" target="_blank">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  
+    <a class="social-icon" href="https:/youtube.com" target="_blank">
+      <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+      <div class="container-two">
+          <p class="footer-text">Fur Friends<br>Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+          copyright 2023 FurFriends | privacy policy</p>
+        
+        
+      </div>
+  </footer>
+  
+  
+  
+  
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
       
       
       
