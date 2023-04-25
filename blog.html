@@ -49,8 +49,8 @@ body {
   padding-left: 20px;
 }
 
-
-.img {
+/* Fake image */
+.fakeimg {
   background-color: teal;
   width: 100%;
   padding: 20px;
@@ -85,6 +85,25 @@ body {
     padding: 0;
   }
 }
+.social-icon{
+          color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          float: right;
+          
+          
+        }
+        .social-icon:hover{
+          color: peru;
+          background-color: white;
+        }
+    
+        .footer-text {
+          font-size: 24px;
+          font-family: 'Lato', sans-serif;
+          padding: 0 100px;
+        }
 </style>
 
 
@@ -92,7 +111,7 @@ body {
 
 
 <body>
-    <img src="images/logo.png" class="fur-friends-logo">
+    <img src="images/logo.png" alt="Fur Friends Logo" class="fur-friends-logo">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -125,7 +144,7 @@ body {
                 <h2>Hiking with Dogs:  Breeds that Make Great Trail Partners</h2>
                 <h4>Advernturing with Your Dog</h4> 
                 <p>Erin Wahl, Dec 7, 2017</p>
-                <div class="img" style="height:500px;"><img src="images/backpackdog.jpg" alt="hiking dog with person"></div>
+                <div class="fakeimg" style="height:500px;"><img src="images/backpackdog.jpg" alt="hiking dog with person"></div>
                 <p>Many dog owners have an active lifestyle, when they are looking for a dog breeds they are searching for a companion well suited for adventure.  Many dog breeds have been bred for long hours of work outdoors.  These are the best breeds for adventure dogs.  
                 <a href="#">Read More</a>
                 </p>
@@ -134,7 +153,7 @@ body {
                 <h2>Do Dogs Need Boots for Hot and Cold Weather?</h2>
                 <h4>Benefits of Dog Boots</h4>
                 <p>Erin Wahl, Sep 2, 2017</p>
-                <div class="img" style="height:500px;"><img src="images/bootsdog.jpg" alt="dog with booties"></div>
+                <div class="fakeimg" style="height:500px;"><img src="images/bootsdog.jpg" alt="dog with booties"></div>
                 <p>Boots help prevent paws from getting cut and from getting injuries.    Providing your dog with added traction prevents slips and falls. They also stop snow from building up in between the dog’s paw pads which can cause painful sores.
                   <a href="#">Read More</a></p>
               </div>
@@ -142,7 +161,7 @@ body {
                 <h2>New Pet Adoption Agency </h2>
                 <h4>Fur Friends set to open in Essex, Vermont</h4> 
                 <p>Erin Wahl, Dec 7, 2017</p>
-                <div class="img" style="height:500px;"><img src="images/building.jpg" alt="brick building"></div>
+                <div class="fakeimg" style="height:500px;"><img src="images/building.jpg" alt="brick building"></div>
                 <p>Brand new pet adoption agency set to open its doors in May.  Fur Friends is a native to Essex, Vermont.  However, they found a new home in a rural part of town.   
                   <a href="#">Read More</a>
                 </p>
@@ -151,7 +170,7 @@ body {
             <div class="rightcolumn">
               <div class="card">
                 <h2>About Fur Friends</h2>
-                <div class="img" style="height:300px;"><img src="images/logo.png" alt="logo"></div>
+                <div class="fakeimg" style="height:300px;"><img src="images/logo.png" alt="logo"></div>
                 <p>Fur Friends was established by a group of college friends who once adopted a 3-legged calico, Sadie, while attending college in Burlington, Vermont.</p>
               
             </div>
@@ -160,19 +179,19 @@ body {
               <div class="card">
                 <h3>Popular Post</h3>
                 
-                <div class="img" style="height:300px;"><img src="images/cageddog.jpg" alt="dog"></div><br>
+                <div class="fakeimg" style="height:300px;"><img src="images/cageddog.jpg" alt="dog in cage"></div><br>
                   <h2>Emaciated Dog Found in Central Park</h2>
                   <h3>December 29, 2022</h3>
                   <p>Last week, Animal Control officers found a dog abandoned […]<a href="#">Read More</a> </p>
 
 
-                <div class="img" style="height:300px;"><img src="images/chico.jpg" alt="dog"></div><br>
+                <div class="fakeimg" style="height:300px;"><img src="images/chico.jpg" alt="dog"></div><br>
                     <h2>Fleck found his forever home after being in our shelter for 360 days!</h2>
                     <h3>October 29,2022</h3>
                     <p>Fleck made headlines earlier this year when a witness […] <a href="#">Read More</a></p>
                   
                 
-                <div class="img"style="height:300px;" ><img src="images/fireworks.jpg" alt="dog"></div>
+                <div class="fakeimg"style="height:300px;" ><img src="images/fireworks.jpg" alt="fireworks"></div>
                   <h2>Fourth of July Pet Safety</h2>
                   <h3>June 26, 2022</h3>
                   <p>The Fourth of July can be a fun time […] <a href="#">Read More</a></p>
@@ -196,18 +215,40 @@ body {
 
 
 
-        <footer>
-            <div class="container">
-                <h1 class="footer">Fur Friends</h1>
-                <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
-                copyright 2023 FurFriends</p>
+
+
+          <footer>
+
+            <a class="social-icon" href="https://facebook.com" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            
+            
+            <a class="social-icon" href="https:/instagram.com" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
                 
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-square-instagram"></i>
-            </div>
-        </footer>
-        
-        
+            <a class="social-icon" href="https:/twitter.com" target="_blank">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          
+            <a class="social-icon" href="https:/youtube.com" target="_blank">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+              <div class="container-two">
+                  <p class="footer-text">Fur Friends<br>Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+                  copyright 2023 FurFriends | privacy policy</p>
+                
+                
+              </div>
+          </footer>
+          
+          
+          
+          
+          
+          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         
         
         
