@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -98,24 +100,45 @@
             margin-right: 15px;
         }
             
-        a {
-            font-family: "Playfair Display", sans-serif;
-            color: white;
-            font-size: 25px;
-            font-weight: bolder;
-            padding: 10px 20px;
-            text-transform: uppercase;
-            text-align: center;
-            
-            
-        }
+    
         .white-space-1{
             line-height: 80px;
             padding: 0 100px;
             background-color: black;
         
         }
+      button{
+        border-radius: 4px;
+        color: black;
+        background-color: peru;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .social-icon{
+          color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          float: right;
+          
+          
+          
+        }
+        .social-icon:hover{
+          color: peru;
+          background-color: white;
+        }
       
+        .footer-text {
+          font-size: 24px;
+          font-family: 'Lato', sans-serif;
+          padding: 0 100px;
+        }
     </style>
 
  
@@ -124,7 +147,7 @@
 </head>
 
 <body>
-    <img src="images/logo.png" class="fur-friends-logo">
+    <img src="images/logo.png" alt="Fur Friends Logo" class="fur-friends-logo">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -209,7 +232,9 @@
             <div class="container">
                 <white-space class="white-space-1"></white-space>
             </div>
-            <a href="application.html">ADOPTION APPLICATION</a>
+            <a href="contact.html">
+                <button>Contact Us</button>
+            </a>  
     </div>
 </div>
 </div> 
@@ -219,16 +244,40 @@
 
 
     
+
+
+<footer>
+
+    <a class="social-icon" href="https://facebook.com" target="_blank">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </a>
     
-        <footer>
-            <div class="container">
-                <h1 class="footer">Fur Friends</h1>
-                <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-square-instagram"></i>
-            </div>
-        </footer>
+    
+    <a class="social-icon" href="https:/instagram.com" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
         
+    <a class="social-icon" href="https:/twitter.com" target="_blank">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  
+    <a class="social-icon" href="https:/youtube.com" target="_blank">
+      <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+      <div class="container-two">
+          <p class="footer-text">Fur Friends<br>Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+          copyright 2023 FurFriends | privacy policy</p>
+        
+        
+      </div>
+  </footer>
+  
+  
+  
+  
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         
         
         
