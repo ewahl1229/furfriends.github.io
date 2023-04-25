@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +15,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script src='https://kit.fontawesome.com/f4cf415fdd.js' crossorigin='anonymous'></script>
-
+</head>
    
     <style>
         *{
@@ -21,283 +23,291 @@
             padding: 0;
             box-sizing: border-box;
         }
-        a{
-            font-family: "Playfair Display", sans-serif;
-            color: black;
-            font-size: 17px;
-            font-weight: bolder;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: uppercase;
-            text-align: justify;
-            
-        }
-        .flex-container {
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .flex-box1 {
-            width: 400px;
-            height: 400px;
-            background: url(images/em.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;
-         }
       
-       
-        .flex-box2{
-            width: 400px;
-            height: 400px;
-            background: url(images/elle.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box3{
-            width: 400px;
-            height: 400px;
-            background: url(images/bee.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box4{
-            width: 400px;
-            height: 400px;
-            background: url(images/evie.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box5{
-            width: 400px;
-            height: 400px;
-            background: url(images/jasper.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box6{
-            width: 400px;
-            height: 400px;
-            background: url(images/jasmine.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box7{
-            width: 400px;
-            height: 400px;
-            background: url(images/louie3.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box8{
-            width: 400px;
-            height: 400px;
-            background: url(images/butters.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
+        body{
+          min-height: 100vh;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #f2f2f2;
+          position: relative;
         }
 
-        .name{
-            font-family: 'Playfair Display', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
+        body::before{
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: teal;
+          clip-path: inset(47% 0 0 0);
+          z-index: -1;
         }
-        .flex-container-name{
+        .container{
+          max-width: 950px;
+          width: 100%;
+          overflow: hidden;
+          padding: 80px 0;
+        }
+
+        .container .main-card{
+          width: 200%;
+        
+          display: flex;
+          justify-content: space-evenly;
+          transition: all 1s ease;
+
+        }
+        #two:checked ~ .main-card{
+          margin-left: -100%;
+        }
+        .main-card .cards{
+          width: calc(100% / 2 - 10px);
+          display: flex;
+          justify-content: space-between;
+          margin: 0 20px;
+          flex-wrap: wrap;
+
+        }
+        .main-card .cards .card{
+          background: #fff;
+          width: calc(100% / 3 - 10px);
+          padding: 30px;
+          border-radius: 24px;
+          transition: all 0.4s ease;
+
+
+        }
+
+        .main-card .cards .card:hover{
+          transform: translateY(-15px);
+        }
+
+        .cards .card .content{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+        }
+
+        .cards .card .content .img{
+          height: 130px;
+          width: 130px;
+          margin-bottom: 14px;
+          background: teal;
+          border-radius: 50%;
+
+
+        }
+        .card .content .img img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 3px solid white;
+          padding: 3px;
+
+ 
+
+        }
+
+        .card .content .details .name{
+          font-size: 20px;
+          font-weight: 500;
+
+        }
+
+        .card .content .details .job{
+          font-size: 20px;
+          color:teal;
+
+          
+        }
+
+        .card .content{
+          display: flex;
+          margin-top: 10px;
+        }
+
+        .button-one{
+          display: flex;
+          margin: 20px;
+          justify-content: center;
+
+        }
+        .button-one label{
+          height: 15px;
+          width: 15px;
+          background: white;
+          margin: 0 4px;
+          border-radius: 20px;
+          transition: all 0.5s ease;
+
+        }
+
+        .button-one label.active{
+          width: 35px;
+
+        }
+
+        #one:checked ~ .button-one label.one{
+          width: 35px; 
+
+        }
+        #two:checked ~ .button-one label.two{
+          width: 35px;
+          
+        }
+        #two:checked ~ .button-one label.one{
+          width: 15px;
+        }
+        #one:checked ~ .button-one label.two{
+          width: 15px;
+        }
+
+
+        input[type="radio"]{
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .main-card .cards .card{
+            width: calc(100% / 2 - 10px);
+            margin: 20px 0 10px 0;
+
+          }
+        }
+
+        @media (max-width: 600px) {
+          .main-card .cards .card{
             width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-              
+           
+
+          }
         }
-        .flex-container-description{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .description{
-            font-family: 'Lato', sans-serif;
-            font-size: 18px;
-            font-weight: none;  
-        }
-      
-    </style>
-  
-</head>
+        button{
+        border-radius: 4px;
+        color: black;
+        background-color: peru;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    
+</style>
 
 <body>
-  <img src="images/logo.png" class="fur-friends-logo">
-  <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-          <i class="fa-solid fa-bars"></i>
-      </label>
+
+
+
+
+
+  <div class="container">
+    <input type="radio" name="dot" id="one">
+    <input type="radio" name="dot" id="two">
+    <div class="main-card">
+      <div class="cards">
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/bee.jpg" alt="tabby cat">
+            </div>
+            <div class="details">
+              <div class="name">Bee</div>
+              <div class="job">2 y/o tabby cat<br>fun, loving & entergetic cat<br>loves watching birds out the window</div>
+            </div>
+          </div>
+        </div>
       
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/evie.jpg" alt="calico cat">
+            </div>
+            <div class="details">
+              <div class="name">Evie</div>
+              <div class="job">1 y/o calico cat<br>enjoys playing with other cats</div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/jasper.jpg" alt="tabby cat">
+            </div>
+            <div class="details">
+              <div class="name">Jasper</div>
+              <div class="job">5 y/o tabby cat<br>enjoys relaxing and watching birds</div>
+            </div>
+          </div>
+        </div>
+  </div>
       
-     
-          <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">home</a></li>
-              <li><a href="adopt.html">adopt</a></li>
-              <li><a href="about.html">about us</a></li>
-              <li><a href="blog.html">blog</a></li>
-              <li><a href="volunteer.html">volunteer</a></li>
-              <li><a href="policy.html">policy</a></li>
-              <li><a href="contact.html">contact us</a></li>
-       
-          </ul>
-      </nav>
-
-
-     
-
-
-    <div class="flex-container">
-        <div class="flex-box1">
-           
+      <div class="cards">
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/em.jpg" alt="grey and white cat">
+            </div>
+            <div class="details">
+              <div class="name">Em</div>
+              <div class="job">4 y/o cat<br>prefers to be in a house without other animals or kids</div>
+            </div>
+          </div>
         </div>
-        <div class="flex-box2">
-
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/louie2.jpg" alt="black and white kitten">
+            </div>
+            <div class="details">
+              <div class="name">Louie</div>
+              <div class="job">4mo old black and white kitten<br>loves to play and explore</div>
+            </div>
+          </div>
         </div>
-        <div class="flex-box3">
-            
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/jasmine.jpg" alt="tabby cat">
+            </div>
+            <div class="details">
+              <div class="name">Jasmine</div>
+              <div class="job">7 y/o tabby cat<br>antisocial<br>does better in a home without other animals or children</div>
+            </div>
+          </div>
         </div>
-        <div class="flex-box4">
-            
-        </div>
+      </div>
     </div>
-    <div class="flex-container-name">
-        <div class="flex-boxa">
-          <h1 class="name">Em</h1>
-        </div>
-        <div class="flex-boxb">
-          <h1 class="name">Elle</h1> 
-        </div>
-        <div class="flex-boxc">
-          <h1 class="name">Bee</h1>  
-        </div>
-        <div class="flex-boxd">
-          <h1 class="name">Evie</h1> 
-        </div>
+
+
+
+      <div class="button-one">
+        <label for="one" class="one active"></label>
+        <label for="two" class="two"></label>
+      </div>
     </div>
-    <div class="flex-container-description">
-        <div class="flex-boxa">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, spayed<br> Prefers a Home With:
-            Other dogs, children</p>
-        </div>
-        <div class="flex-boxb">
-          <p class="description">Characteristics: Enjoys snuggles, Loving companion<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, spayed<br> Prefers a Home With:
-            Other dogs, cats, children</p> 
-        </div>
-        <div class="flex-boxc">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, spayed<br> Prefers a Home With:
-            Other dogs, cats, children</p>  
-        </div>
-        <div class="flex-boxd">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, spayed<br> Prefers a Home With:
-            Other dogs, cats, children</p> 
-        </div>
+    
+
+    <div>
+    <a href="application.html">
+      <button>Application</button>
+    </a> 
     </div>
-    <div class="flex-container">
-        <div class="flex-box5">
-     
-        </div>
-        <div class="flex-box6">
-         
-        </div>
-        <div class="flex-box7">
-         
-        </div>
-        <div class="flex-box8">
-         
-        </div>
-    </div>
-   
   
-    <div class="flex-container-name">
-        <div class="flex-boxa">
-          <h1 class="name">Jasper</h1>
-        </div>
-        <div class="flex-boxb">
-          <h1 class="name">Jasmine</h1> 
-        </div>
-        <div class="flex-boxc">
-          <h1 class="name">Louie</h1>  
-        </div>
-        <div class="flex-boxd">
-          <h1 class="name">Butters</h1> 
-        </div>
-    </div>
-    <div class="flex-container-description">
-        <div class="flex-boxa">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p>
-        </div>
-        <div class="flex-boxb">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, spayed<br> Prefers a Home With:
-            Adults</p> 
-        </div>
-        <div class="flex-boxc">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p>  
-        </div>
-        <div class="flex-boxd">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs & cats</p> 
-        </div>
-    </div>
-
-</div>
-
-<div class="container">
-    <white-space class="white-space"></white-space>
-</div>
-
-
-<a href="dogs.html">ADOPTABLE DOGS</a>
-
-<a href="cats.html">ADOPTABLE CATS</a>
-
-<a href="otherpets.html">OTHER ADOPTABLE PETS</a>
-
-<div class="container">
-  <white-space class="white-space"></white-space>
-</div>
-
+ 
 
 
     
 
-        <footer>
-          <div class="container">
-              <h1 class="footer">Fur Friends</h1>
-              <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-              <img class="facebook" src="">
-              <img class="intagram" src="">
-          </div>
-      </footer>
-      
+ 
       
       
       
