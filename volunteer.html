@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -90,9 +92,51 @@
             
         }
 
-   
+        button{
+        border-radius: 4px;
+        color: black;
+        background-color: peru;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .social-icon{
+          color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          float: right;
+          
+          
+          
+        }
+        .social-icon:hover{
+          color: peru;
+          background-color: white;
+        }
+     
+        .footer-text {
+          font-size: 24px;
+          font-family: 'Lato', sans-serif;
+          padding: 0 100px;
+        }
       
-    
+        .social-icon-paypal{
+            color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          
+        }
+        .social-icon-paypal:hover{
+          color: peru;
+          background-color: white;
+        }
+
     </style>
     
 
@@ -101,7 +145,7 @@
 </head>
 
 <body>
-    <img src="images/logo.png" class="fur-friends-logo">
+    <img src="images/logo.png" alt="Fur Friends Logo" class="fur-friends-logo">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -136,9 +180,10 @@
         <div class="volunteer-text">
             <h1 class="volunteer-title">Volunteer</h1>
             <p class="volunteer-content-text">There are several ways that you can help save animals.  Find out more about what type of volunteering works best for you.  Fur Friends are always looking for new volunteers.</p><br>
-            <a href="aboutadoption.html">DONATION</a>
+            <div>
               
-                </div>
+              
+            </div>
                 
         </div>     
     </div>
@@ -155,7 +200,12 @@
                 Please contact us for further information or visit us on Facebook and Instagram
                 </p><br>
             
-                <a href="contact.html">CONTACT US</a>
+                <div>
+                    <a class="social-icon-paypal" href="https://paypal.com" target="_blank">
+                        <ion-icon name="logo-paypal"></ion-icon>
+                        <h1>Donate</h1>
+                      </a>
+                </div>
         </div>     
     </div>
 
@@ -175,14 +225,40 @@
     <white-space class="white-space"></white-space>
 </div>
 
+
+
 <footer>
-    <div class="container">
-        <h1 class="footer">Fur Friends</h1>
-        <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-    </div>
-</footer>
+
+    <a class="social-icon" href="https://facebook.com" target="_blank">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    
+    
+    <a class="social-icon" href="https:/instagram.com" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+        
+    <a class="social-icon" href="https:/twitter.com" target="_blank">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  
+    <a class="social-icon" href="https:/youtube.com" target="_blank">
+      <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+      <div class="container-two">
+          <p class="footer-text">Fur Friends<br>Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+          copyright 2023 FurFriends | privacy policy</p>
+        
+        
+      </div>
+  </footer>
+  
+  
+  
+  
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 
