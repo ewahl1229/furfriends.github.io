@@ -17,287 +17,290 @@
     <script src='https://kit.fontawesome.com/f4cf415fdd.js' crossorigin='anonymous'></script>
 
    
-    <style>
+    
+         <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        a{
-            font-family: "Playfair Display", sans-serif;
-            color: black;
-            font-size: 17px;
-            font-weight: bolder;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: uppercase;
-            text-align: justify;
-            
-        }
-        .flex-container {
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .flex-box1 {
-            width: 400px;
-            height: 400px;
-            background: url(images/peanut.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;
-         }
       
-       
-        .flex-box2{
-            width: 400px;
-            height: 400px;
-            background: url(images/oreo.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box3{
-            width: 400px;
-            height: 400px;
-            background: url(images/sammy.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box4{
-            width: 400px;
-            height: 400px;
-            background: url(images/petie.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box5{
-            width: 400px;
-            height: 400px;
-            background: url(images/pedro.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box6{
-            width: 400px;
-            height: 400px;
-            background: url(images/axl.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box7{
-            width: 400px;
-            height: 400px;
-            background: url(images/guineapigs.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
-        }
-        .flex-box8{
-            width: 400px;
-            height: 400px;
-            background: url(images/ruby.jpg);
-            background-size: cover;
-            line-height: 200px;
-            border-radius: 20px;
-            margin: 10px;  
+        body{
+          min-height: 100vh;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #f2f2f2;
+          position: relative;
         }
 
-        .name{
-            font-family: 'Playfair Display', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
+        body::before{
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: teal;
+          clip-path: inset(47% 0 0 0);
+          z-index: -1;
         }
-        .flex-container-name{
+        .container{
+          max-width: 950px;
+          width: 100%;
+          overflow: hidden;
+          padding: 80px 0;
+        }
+
+        .container .main-card{
+          width: 200%;
+        
+          display: flex;
+          justify-content: space-evenly;
+          transition: all 1s ease;
+
+        }
+        #two:checked ~ .main-card{
+          margin-left: -100%;
+        }
+        .main-card .cards{
+          width: calc(100% / 2 - 10px);
+          display: flex;
+          justify-content: space-between;
+          margin: 0 20px;
+          flex-wrap: wrap;
+
+        }
+        .main-card .cards .card{
+          background: #fff;
+          width: calc(100% / 3 - 10px);
+          padding: 30px;
+          border-radius: 24px;
+          transition: all 0.4s ease;
+
+
+        }
+
+        .main-card .cards .card:hover{
+          transform: translateY(-15px);
+        }
+
+        .cards .card .content{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+        }
+
+        .cards .card .content .img{
+          height: 130px;
+          width: 130px;
+          margin-bottom: 14px;
+          background: teal;
+          border-radius: 50%;
+
+
+        }
+        .card .content .img img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 3px solid white;
+          padding: 3px;
+
+ 
+
+        }
+
+        .card .content .details .name{
+          font-size: 20px;
+          font-weight: 500;
+
+        }
+
+        .card .content .details .job{
+          font-size: 20px;
+          color: teal;
+
+          
+        }
+
+        .card .content{
+          display: flex;
+          margin-top: 10px;
+        }
+
+        .button-one{
+          display: flex;
+          margin: 20px;
+          justify-content: center;
+
+        }
+        .button-one label{
+          height: 15px;
+          width: 15px;
+          background: white;
+          margin: 0 4px;
+          border-radius: 20px;
+          transition: all 0.5s ease;
+
+        }
+
+        .button-one label.active{
+          width: 35px;
+
+        }
+
+        #one:checked ~ .button-one label.one{
+          width: 35px; 
+
+        }
+        #two:checked ~ .button-one label.two{
+          width: 35px;
+          
+        }
+        #two:checked ~ .button-one label.one{
+          width: 15px;
+        }
+        #one:checked ~ .button-one label.two{
+          width: 15px;
+        }
+
+
+        input[type="radio"]{
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .main-card .cards .card{
+            width: calc(100% / 2 - 10px);
+            margin: 20px 0 10px 0;
+
+          }
+        }
+
+        @media (max-width: 600px) {
+          .main-card .cards .card{
             width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-              
+           
+
+          }
         }
-        .flex-container-description{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .description{
-            font-family: 'Lato', sans-serif;
-            font-size: 18px;
-            font-weight: none;  
-        }
-      
-    </style>
-  
-</head>
+        button{
+        border-radius: 4px;
+        color: black;
+        background-color: peru;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+</style>
 
 <body>
-  <img src="images/logo.png" class="fur-friends-logo">
-  <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-          <i class="fa-solid fa-bars"></i>
-      </label>
-      
-      
-     
-          <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">home</a></li>
-              <li><a href="adopt.html">adopt</a></li>
-              <li><a href="about.html">about us</a></li>
-              <li><a href="blog.html">blog</a></li>
-              <li><a href="volunteer.html">volunteer</a></li>
-              <li><a href="policy.html">policy</a></li>
-              <li><a href="contact.html">contact us</a></li>
-       
-          </ul>
-      </nav>
-
-     
 
 
-    <div class="flex-container">
-        <div class="flex-box1">
-           
-        </div>
-        <div class="flex-box2">
-
-        </div>
-        <div class="flex-box3">
-            
-        </div>
-        <div class="flex-box4">
-            
-        </div>
-    </div>
-    <div class="flex-container-name">
-        <div class="flex-boxa">
-          <h1 class="name">Peanut</h1>
-        </div>
-        <div class="flex-boxb">
-          <h1 class="name">Oreo</h1> 
-        </div>
-        <div class="flex-boxc">
-          <h1 class="name">Sammy</h1>  
-        </div>
-        <div class="flex-boxd">
-          <h1 class="name">Petie Squakleton</h1> 
-        </div>
-    </div>
-    <div class="flex-container-description">
-        <div class="flex-boxa">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p>
-        </div>
-        <div class="flex-boxb">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p> 
-        </div>
-        <div class="flex-boxc">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p>  
-        </div>
-        <div class="flex-boxd">
-          <p class="description">Characteristics: Gives off funky fresh vibes.<br> Coat Length: N/A<br> House Trained: Yes<br> Health: Vaccinations up to date<br> Prefers a Home With:
-            Adults & children<br>Petie Squakleton is a pretty boy!</p> 
-        </div>
-    </div>
-    <div class="flex-container">
-        <div class="flex-box5">
-     
-        </div>
-        <div class="flex-box6">
-         
-        </div>
-        <div class="flex-box7">
-         
-        </div>
-        <div class="flex-box8">
-         
-        </div>
-    </div>
-   
-  
-    <div class="flex-container-name">
-        <div class="flex-boxa">
-          <h1 class="name">Pedro</h1>
-        </div>
-        <div class="flex-boxb">
-          <h1 class="name">Axl</h1> 
-        </div>
-        <div class="flex-boxc">
-          <h1 class="name">Fettuccine & Alfredo</h1>  
-        </div>
-        <div class="flex-boxd">
-          <h1 class="name">Ruby</h1> 
-        </div>
-    </div>
-    <div class="flex-container-description">
-        <div class="flex-boxa">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p>
-        </div>
-        <div class="flex-boxb">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p> 
-        </div>
-        <div class="flex-boxc">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p>  
-        </div>
-        <div class="flex-boxd">
-          <p class="description">Characteristics: Energetic, Fun, Loving<br> Coat Length:Short<br> House Trained: Yes<br> Health: Vaccinations up to date, neutered<br> Prefers a Home With:
-            Other dogs, cats, children</p> 
-        </div>
-    </div>
-
-</div>
-
-
-<div class="container">
-  <white-space class="white-space"></white-space>
-</div>
-
-
-<a href="dogs.html">ADOPTABLE DOGS</a>
-
-<a href="cats.html">ADOPTABLE CATS</a>
-
-<a href="otherpets.html">OTHER ADOPTABLE PETS</a>
-
-<div class="container">
-<white-space class="white-space"></white-space>
-</div>
-
-    
-
-        <footer>
-          <div class="container">
-              <h1 class="footer">Fur Friends</h1>
-              <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org</p>
-              <img class="facebook" src="">
-              <img class="intagram" src="">
+  <div class="container">
+    <input type="radio" name="dot" id="one">
+    <input type="radio" name="dot" id="two">
+    <div class="main-card">
+      <div class="cards">
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/axl.jpg" alt="brown rabbit">
+            </div>
+            <div class="details">
+              <div class="name">Axl</div>
+              <div class="job">1 y/o long-haired rabbit</div>
+            </div>
           </div>
-      </footer>
+        </div>
       
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/oreo.jpg" alt="black and white rabbit">
+            </div>
+            <div class="details">
+              <div class="name">Oreo</div>
+              <div class="job">2 y/o long-eared rabbit</div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/pedro.jpg" alt="mule">
+            </div>
+            <div class="details">
+              <div class="name">Pedro</div>
+              <div class="job">10 y/o mule</div>
+            </div>
+          </div>
+        </div>
+  </div>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/guineapigs.jpg" alt="brown guinea pigs">
+            </div>
+            <div class="details">
+              <div class="name">Butterscotch & Rocco</div>
+              <div class="job">guinea pig pair</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/petie.jpg" alt="green feathery bird">
+            </div>
+            <div class="details">
+              <div class="name">Petie Squackleton</div>
+              <div class="job">17 y/o pretty bird</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="img">
+              <img src="images/sammy.jpg" alt="brown hamster">
+            </div>
+            <div class="details">
+              <div class="name">Sammy</div>
+              <div class="job">6 mo. long-haired hamster</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+      <div class="button-one">
+        <label for="one" class="one active"></label>
+        <label for="two" class="two"></label>
+      </div>
+    </div>
+    
+  
+  
+    <div>
+      <a href="application.html">
+        <button>Application</button>
+      </a> 
+      </div>
+  
+ 
       
       
       
