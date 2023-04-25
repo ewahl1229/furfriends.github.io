@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,239 +15,280 @@
     
     <script src='https://kit.fontawesome.com/f4cf415fdd.js' crossorigin='anonymous'></script>
 
+</head>
     <style>
-        .banner{
+
+        
+  * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+    font-family: 'Lato', sans-serif;
+  }
+  
+
+  
+  nav {
+    background: black;
+    height: 200px;
+    width: 100%;
+
+  }
+
+ .fur-friends-logo{
+  position: absolute;
+  height: auto;
+  left: 20px;
+  width: 200px;
+
+ }
+
+  nav ul {
+    float: right;
+    margin-right: 20px;
+    margin-top: 50px;
+
+  }
+
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+  }
+
+  nav ul li a {
+    font-family: "Playfair Display", sans-serif;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+    padding: 7px 13px;
+    text-transform: lowercase;
+
+  }
+
+  a.active, a:hover {
+    background: peru;
+    transition: .5s;
+  }
+
+  .checkbtn {
+    font-size: 30px;
+    color: peru;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+
+  }
+
+
+  #check {
+    display: none;
+
+  }
+
+  @media (max-width: 952px){
+    label.logo {
+      font-size: 30px;
+      padding-left: 50px;
+
+    }
+    nav ul li a {
+      font-size: 16px;
+      
+    }
+  }
+
+
+
+  @media (max-width: 858px){
+    .checkbtn {
+      display: block;
+
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: teal;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px, 0;
+      line-height: 30px;
+
+    }
+    nav ul li a {
+      font-size: 20px;
+
+    }
+    a:hover, a.active {
+      background: none;
+      color: teal;
+
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+
+
+.paw-prints{
+  width: 100%;
+  height: 800px;
+
+}
+
+.orange-logo {
+  width: 320px;
+  height: 200px;
+  background-image: url(images/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+        .cards{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: teal;
+
+        }
+
+        .container-card{
             position: relative;
+            width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+
+        }
+
+        .container-card .card{
+            max-width: 300px;
+            height: 420px;
+            position: relative;
+            background: white;
+            margin: 30px 10px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+            transition: 0.5s ease-in-out;
+
+
+        }
+
+        .container-card .card:hover{
+            height: 420px;
+
+        }
+
+        .container-card .card .img{
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 20px;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+
+        }
+
+        .container-card .card .img img{
+            max-width: 100%;
+            border-radius: 4px;
+
+        }
+
+        .container-card .card .content{
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+
+        }
+        .container-card .card:hover .content{
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
+
+        }
+
+        .banner-one img{
             width: 100%;
-            margin: 0 auto;
+            height: 600px;
         }
-        .banner img{
-           width: 100%;
-           height: 600px;
-           
-            
-        }
-        .heading{
+        .banner-one .heading{
             color: white;
             position: absolute;
             top: 50%;
             width: 100%;
             text-align: right;
-            padding-right: 40px;
+            padding-right: 100px;
             font-family: 'Lato',sans-serif;
             font-size: 32px;
         }
-        .title{
-            color: peru;
-            position: absolute;
-            top: 20%;
-            width: 100%;
-            text-align: left;
-            padding-right: 40px;
-            font-family: 'Playfair Display',sans-serif;
-            font-size: 60px;  
-            padding-left: 40px;
-            
+        .social-icon{
+          color: teal;
+          font-size: 32px;
+          padding: 30px 10px 0 0;
+          justify-content: center;
+          
+          
+          
         }
-
-        .featured{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            background: teal; 
-        }
-
-        .featured-title{
-            font-family: 'Playfair Display', sans-serif;
-            font-size: 40px;
-            color: white;
-        }
-
-        .featured-content{
-            font-family: 'Lato', sans-serif;
-            font-size: 30px;
-            color: white;
-        }
-
-        .featured-2{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            background: peru;
-        }
-
-        .featured-2 .mission{
-            padding-top: 80px;
-        }
-
-    
-  
-
-
-        .flex-container {
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            color: peru;
-        }
-    
-        .flex-container-name{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-              
-        }
-        .flex-container-description{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding-top: 40px;
-        }
-        .description{
-            font-family: 'Lato', sans-serif;
-            font-size: 18px;
-            font-weight: none;  
-        }
-
-
-        .flex-box1 {
-            width: 400px;
-            height: 400px;
-            background: url(images/elin.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;
-            border: solid #fff;
-         }
-         .flex-box11{
-            width: 400px;
-            height: 400px;
-            background: url(images/em.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;
-            border: solid #fff; 
-         }
-      
-       
-        .flex-box2{
-            width: 400px;
-            height: 400px;
-            background: url(images/milo.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;  
-            border: solid #fff;
-        }
-        .flex-box22{
-            width: 400px;
-            height: 400px;
-            background: url(images/chip.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;
-            border: solid #fff; 
-         }
-        .flex-box3{
-            width: 400px;
-            height: 400px;
-            background: url(images/luna.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;  
-            border: solid #fff;
-        }
-        .flex-box33{
-            width: 400px;
-            height: 400px;
-            background: url(images/peanut.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;
-            border: solid #fff; 
-         }
-        .flex-box4{
-            width: 400px;
-            height: 400px;
-            background: url(images/chico.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;  
-            border: solid #fff;
-        }
-        .flex-box44{
-            width: 400px;
-            height: 400px;
-            background: url(images/pugsley.jpg);
-            background-size: cover;
-            line-height: 200px;
-            margin: 10px;
-            border: solid #fff; 
-         }
-
-        .name{
-            font-family: 'Lato', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .flex-container-name{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-              
-        }
-        .flex-container-description{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .description{
-            font-family: 'Lato', sans-serif;
-            font-size: 20px;
-            font-weight: 500;  
-            color: white;
-            padding-bottom: 20px;
-            
+        .social-icon:hover{
+          color: peru;
+          background-color: white;
         }
       
-  
+        h1{
+          font-size: 48px;
+          font-family: 'Lato', sans-serif;
+          background-color: peru;
+          color: black;
+          font-weight: 600;
+          padding: 10px;
+          text-align: center;
+        }
+        .footer-text {
+          font-size: 24px;
+          font-family: 'Lato', sans-serif;
+          padding: 0 100px;
+        }
 
-
-
-      
+        .social-icon{
+          float: right;
+        }
     </style>
-    
-  
-</head>
+
 
 <body>
-    <img src="images/logo.png" class="fur-friends-logo">
+    <img src="images/logo.png" alt="Fur Friends Logo" class="fur-friends-logo">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
-        </label>
+        </label> 
         
         
        
@@ -263,12 +303,11 @@
          
             </ul>
         </nav>
-     
         
 
     <div class="container">
         <div class="row">
-            <div class="banner">
+            <div class="banner-one">
                 
                 <img src="images/pawprints.jpg" alt="paw prints">
             
@@ -279,152 +318,81 @@
 
 
 
+<h1>Adoption Stories</h1>
 
-<div class="mission-area">
-        <h1 class="mission-title">Mission</h1>
-       <p class="mission">Fur Friends is a not-for-profit 503(c) organization<br>dedicated to the health and welfare of animals<br> that owns and operates a shelter<br> for unwanted and stray dogs, and cats,<br> as well as the occasional hamster,<br> guinea pig and rabbit, in Essex, Vermont.
-        </p>
+<div class="cards">
+<div class="container-card">
+    <div class="card">
+        <div class="img">
+            <img src="images/luna.jpg" alt="">
+        </div>
+        <div class="content">
+            <h2>Gabby & Luna</h2>
+            <p>Gabby found her best furfriend!</p>
+        </div>
     </div>
-
+    <div class="card">
+        <div class="img">
+            <img src="images/milo.jpg" alt="">
+        </div>
+        <div class="content">
+            <h2>Milo & Ravioli</h2>
+            <p>Milo rescued this sweet cat.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="img">
+            <img src="images/chico.jpg" alt="">
+        </div>
+        <div class="content">
+            <h2>Chico & Mr. Fleck</h2>
+            <p>Chico found his forever friend.</p>
+        </div>
+    </div>
 </div>
-
-
-
-
+</div>
 
     
  
 
-<div class="featured">
-
-    <h1 class="mission-title">Featured Pets</h1>
-    <p class="mission"></p>
 
 
 
 
-    <div class="flex-container">
-        <div class="flex-box11">
-           
-        </div>
-        <div class="flex-box22">
 
-        </div>
-        <div class="flex-box33">
-            
-        </div>
-        <div class="flex-box44">
-            
-        </div>
-    </div>
-
-    <div class="flex-container-name">
-        <div class="flex-boxa">
-          <h1 class="name">Em</h1>
-        </div>
-        <div class="flex-boxb">
-          <h1 class="name">Chip</h1> 
-        </div>
-        <div class="flex-boxc">
-          <h1 class="name">Peanut</h1>  
-        </div>
-        <div class="flex-boxd">
-          <h1 class="name">Pugsley</h1> 
-        </div>
-    </div>
-
-
-    <div class="flex-container-description">
-        <div class="flex-boxa">
-          <p class="description">Em is an affectionate lap cat.<br> Enjoys snuggles and treats.</p>
-        </div>
-        <div class="flex-boxb">
-          <p class="description">Chip enjoys playing fetch.<br>He also enjoys long walks.</p> 
-        </div>
-        <div class="flex-boxc">
-          <p class="description">Peanut loves carrots and apples.</p>  
-        </div>
-        <div class="flex-boxd">
-          <p class="description">Pugsley enjoys hiking.</p> 
-        </div>
-    </div>
-
-
-
-</div>
-
-
-
- 
-
-
-
-<div class="featured-2">
-
-    <h1 class="mission-title">Adoption Stories</h1>
-    <p class="mission"></p>
-
-
-
-
-   <div class="flex-container">
-    <div class="flex-box1">
-       
-    </div>
-    <div class="flex-box2">
-
-    </div>
-    <div class="flex-box3">
-        
-    </div>
-    <div class="flex-box4">
-        
-    </div>
-</div>
-
-<div class="flex-container-name">
-    <div class="flex-boxa">
-      <h1 class="name">Elin & Em</h1>
-    </div>
-    <div class="flex-boxb">
-      <h1 class="name">Milo & Ravioli</h1> 
-    </div>
-    <div class="flex-boxc">
-      <h1 class="name">Gabby & Luna</h1>  
-    </div>
-    <div class="flex-boxd">
-      <h1 class="name">Chico & Mr. Fleck</h1> 
-    </div>
-</div>
-
-
-
-</div>
-
-
-
-
-<div class="container">
-    <white-space class="white-space"></white-space>
-</div>
-<div class="container">
-    <white-space class="white-space"></white-space>
-</div>
 
 <footer>
-    <div class="container">
-        <h1 class="footer">Fur Friends</h1>
-        <p class="footer-text">Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
-        copyright 2023 FurFriends</p>
-        
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-square-instagram"></i>
+
+  <a class="social-icon" href="https://facebook.com" target="_blank">
+    <ion-icon name="logo-facebook"></ion-icon>
+  </a>
+  
+  
+  <a class="social-icon" href="https:/instagram.com" target="_blank">
+    <ion-icon name="logo-instagram"></ion-icon>
+  </a>
+      
+  <a class="social-icon" href="https:/twitter.com" target="_blank">
+    <ion-icon name="logo-twitter"></ion-icon>
+  </a>
+
+  <a class="social-icon" href="https:/youtube.com" target="_blank">
+    <ion-icon name="logo-youtube"></ion-icon>
+  </a>
+    <div class="container-two">
+        <p class="footer-text">Fur Friends<br>Forever Homes & Hearts<br>264 Browns River Road<br>Essex, Vermont<br>Phone: 802-878-1757<br>Email: adopt@furfriends.org<br>
+        copyright 2023 FurFriends | privacy policy</p>
+      
+      
     </div>
 </footer>
 
 
 
 
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
